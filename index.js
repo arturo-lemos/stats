@@ -4,6 +4,7 @@
  */
 function getLength(numbers) {
   // TODO
+  return numbers.length;
 }
 
 /**
@@ -12,6 +13,11 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
+  let sumOfNumbers = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sumOfNumbers += numbers[i];
+  }
+  return sumOfNumbers;
 }
 
 /**
