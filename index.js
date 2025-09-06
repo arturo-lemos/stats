@@ -25,7 +25,13 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  // TODO;
+  let sumOfNumbers = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sumOfNumbers += numbers[i];
+  }
+  let getMean = sumOfNumbers / numbers.length;
+  return getMean;
 }
 
 /**
@@ -34,6 +40,12 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  let getMin = numbers[0];
+  for (number : numbers) {
+    if (getMin > number) {
+      getMin = number;
+    }
+  }
 }
 
 /**
@@ -42,6 +54,7 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  console.log(numbers[3]);
 }
 
 /**
