@@ -40,12 +40,13 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
-  let getMin = numbers[0];
-  for (number : numbers) {
-    if (getMin > number) {
-      getMin = number;
+  let min = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
     }
   }
+  return min;
 }
 
 /**
