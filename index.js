@@ -13,11 +13,11 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
-  let sumOfNumbers = 0;
+  let getSum = 0;
   for (let i = 0; i < numbers.length; i++) {
-    sumOfNumbers += numbers[i];
+    getSum += numbers[i];
   }
-  return sumOfNumbers;
+  return getSum;
 }
 
 /**
@@ -25,12 +25,8 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO;
-  let sumOfNumbers = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sumOfNumbers += numbers[i];
-  }
-  let getMean = sumOfNumbers / numbers.length;
+  // TODO
+  getMean = getSum(numbers) / getLength(numbers);
   return getMean;
 }
 
@@ -40,7 +36,7 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
-  let min = numbers[0];
+  min = numbers[0];
   for (let i = 1; i < numbers.length; i++) {
     if (numbers[i] < min) {
       min = numbers[i];
@@ -55,8 +51,8 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
-  let max = numbers[0];
-  for (i = 1; i < numbers.length; i++) {
+  max = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
     if (numbers[i] > max) {
       max = numbers[i];
     }
@@ -70,17 +66,9 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
-  let min = numbers[0];
-  let max = numbers[0];
-  for (let i = 1; i < numbers.length; i++) {
-    if (numbers[i] < min) {
-      min = numbers[i];
-    }
-    if (numbers[i] > max) {
-      max = numbers[i];
-    }
-  }
-  return [max, min];
+  let high = getMax(numbers);
+  let low = getMin(numbers);
+  return [high, low];
 }
 
 /**
@@ -91,9 +79,8 @@ function getEvens(numbers) {
   // TODO
   let evens = [];
   for (let i = 0; i < numbers.length; i++) {
-    let testforevens = numbers[i];
     if (numbers[i] % 2 === 0) {
-      evens.push(testforevens);
+      evens.push(numbers[i]);
     }
   }
   return evens;
@@ -105,11 +92,10 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
-  let odds = [];
+  odds = [];
   for (let i = 0; i < numbers.length; i++) {
-    let testforodds = numbers[i];
     if (numbers[i] % 2 != 0) {
-      odds.push(testforodds);
+      odds.push(numbers[i]);
     }
   }
   return odds;
